@@ -141,7 +141,7 @@ else{
 			
 		}
 		
-		return(calc.toString());
+		return(calc.obtener().toString());
 	}
 	
 	
