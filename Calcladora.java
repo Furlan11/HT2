@@ -1,11 +1,22 @@
 package lab2Estructuras;
 
+/**
+ * una clase para crear un calculadora que recibe operacion en postfix
+ * @author Guillermo Furlan 20713 
+ * 
+ *
+ */
+
 public class Calcladora {
 	
 	private Pila<Integer> calc;
 
 	
-
+	/**
+	 * verificar si un caracter se puede volver un numero
+	 * @param ope eel string con el cacrater que se queire validar
+	 *  @return bollean con true si e su numeo
+	 */
 	public static boolean isNumeric(String ope) {
 	    try {
 	        double d = Double.parseDouble(ope);
@@ -15,6 +26,11 @@ public class Calcladora {
 	    return true; //Es numerico
 	}
 	
+	/**
+	 * caldular la operacion deseada
+	 * @param op eel string con el cacrater que se queire validarString con la operacione ne l fomato postfix que se desea realñizar
+	 * @return String con el resultado o el mensaje de error
+	 */
 	public String calcular(String op) {
 		 calc= new Pila<>();
 		
