@@ -1,19 +1,17 @@
 package lab2Estructuras;
 
+import java.util.Scanner;
+
 public class Main {
-	public static boolean isNumeric(String ope) {
-	    try {
-	        double d = Double.parseDouble(ope);
-	    } catch (NumberFormatException nfe) {
-	        return false; //Error no es numerico
-	    }
-	    return true; //Es numerico
-	}
+	
 public static void main(String[] args) {
 	
 ;
 	Calcladora pru= new Calcladora();
-	String op= "0 0 / 4 * 3 +";
+	lector lector= new lector();
+	Scanner teclado= new Scanner(System.in);
+	System.out.print(lector.Leer("C:\\Users\\Usuario\\Desktop\\operacion.txt"));
+	String op= lector.Leer("C:\\Users\\Usuario\\Desktop\\operacion.txt");
 	System.out.print(pru.calcular(op));
 	
 	

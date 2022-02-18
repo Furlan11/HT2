@@ -26,6 +26,46 @@ public class Calcladora {
 		char rest= muestra.charAt(12);
 		char divi= muestra.charAt(14);
 		
+		int cantiNum=0;
+		int cantOpe=0;
+//		verificar si hay suficiente snumeros y operaciones
+		for (int j=0 ; j <op.length(); j++) {
+			char carct= op.charAt(j);
+			
+		if(carct!=espacio) {
+				
+				boolean isNum = isNumeric(String.valueOf(carct));
+				if(isNum== true) {
+					
+					cantiNum=cantiNum+1;
+			
+				}
+else{
+					
+					if(carct==suma) {
+						
+						cantOpe=cantOpe+1;
+						
+					}
+					if(carct==mult) { 
+						cantOpe=cantOpe+1;
+						
+					}
+					if(carct==rest) { 
+						
+						cantOpe=cantOpe+1;
+					}
+					if(carct==divi) { 
+						
+						cantOpe=cantOpe+1;
+					}
+}
+			
+		}
+		}
+		if(cantiNum!=cantOpe+1) {
+			return("la cantidad de numeros debe ser mayor a 1 a la de operaiones revise la operacion que ingreso");
+		}
 		System.out.println(espacio);
 		for( int i=0 ; i <op.length(); i++) {
 			char ope= op.charAt(i);
